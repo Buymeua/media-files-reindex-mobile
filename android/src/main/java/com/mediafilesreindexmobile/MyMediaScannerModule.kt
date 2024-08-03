@@ -1,5 +1,6 @@
 package com.mediafilesreindexmobile
 
+import android.media.MediaScannerConnection
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
@@ -17,6 +18,11 @@ class MyMediaScannerModule(reactContext: ReactApplicationContext) :
   @ReactMethod
   fun multiply(a: Double, b: Double, promise: Promise) {
     promise.resolve(a * b)
+  }
+
+  @ReactMethod
+  fun scanFile(path: String) {
+      MediaScannerConnection.scanFile(reactApplicationContext, arrayOf(path), null, null)
   }
 
   companion object {
