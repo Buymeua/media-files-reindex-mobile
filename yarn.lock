@@ -3369,6 +3369,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-native@npm:^0.73.0":
+  version: 0.73.0
+  resolution: "@types/react-native@npm:0.73.0"
+  dependencies:
+    react-native: "*"
+  checksum: a764ca5d876dae3c109da449f736c44271b3b236d0d6e836c078247af1419f6d851600c56bb0c26f3e0d1b4be6eaac56b65c1f74ad0f0d05baf8b65dd1d5c597
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:^18.2.44":
   version: 18.3.3
   resolution: "@types/react@npm:18.3.3"
@@ -9271,7 +9280,8 @@ __metadata:
     "@react-native/eslint-config": ^0.73.1
     "@release-it/conventional-changelog": ^5.0.0
     "@types/jest": ^29.5.5
-    "@types/react": ^18.2.44
+    "@types/react": ^18.3.3
+    "@types/react-native": ^0.73.0
     commitlint: ^17.0.2
     del-cli: ^5.1.0
     eslint: ^8.51.0
@@ -9284,7 +9294,7 @@ __metadata:
     react-native-builder-bob: ^0.29.0
     release-it: ^15.0.0
     turbo: ^1.10.7
-    typescript: ^5.2.2
+    typescript: ^5.5.4
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -11020,7 +11030,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native@npm:0.74.4":
+"react-native@npm:*, react-native@npm:0.74.4":
   version: 0.74.4
   resolution: "react-native@npm:0.74.4"
   dependencies:
@@ -12871,7 +12881,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.4 || ^5.2.2, typescript@npm:^5.2.2":
+"typescript@npm:^4.6.4 || ^5.2.2, typescript@npm:^5.5.4":
   version: 5.5.4
   resolution: "typescript@npm:5.5.4"
   bin:
@@ -12881,7 +12891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.4 || ^5.2.2#~builtin<compat/typescript>, typescript@patch:typescript@^5.2.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.6.4 || ^5.2.2#~builtin<compat/typescript>, typescript@patch:typescript@^5.5.4#~builtin<compat/typescript>":
   version: 5.5.4
   resolution: "typescript@patch:typescript@npm%3A5.5.4#~builtin<compat/typescript>::version=5.5.4&hash=14eedb"
   bin:
