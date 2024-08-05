@@ -6,7 +6,11 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const MyMediaScanner = NativeModules.MyMediaScanner
+interface MyMediaScannerType {
+  scanFile(path: string): Promise<void>;
+}
+
+const MyMediaScanner: MyMediaScannerType = NativeModules.MyMediaScanner
   ? NativeModules.MyMediaScanner
   : new Proxy(
       {},
@@ -17,6 +21,6 @@ const MyMediaScanner = NativeModules.MyMediaScanner
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return MyMediaScanner.multiply(a, b);
+export function scanFile(path: string): Promise<void> {
+  return MyMediaScanner.scanFile(path);
 }

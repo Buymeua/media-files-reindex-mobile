@@ -12,11 +12,15 @@ npm install media-files-reindex-mobile
 
 
 ```js
-import { multiply } from 'media-files-reindex-mobile';
+import { scanFile } from 'media-files-reindex-mobile';
 
 // ...
 
-const result = await multiply(3, 7);
+scanFile('/path/to/file').then(() => {
+  console.log('File scanned successfully');
+}).catch(error => {
+  console.error('Error scanning file:', error);
+});
 ```
 
 
