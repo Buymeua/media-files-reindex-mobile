@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
     "rootDir": ".",
     "paths": {
       "media-files-reindex-mobile": ["./src/index"]
@@ -25,5 +26,6 @@
     "strict": true,
     "target": "ESNext",
     "verbatimModuleSyntax": true
-  }
+  },
+  "include": ["src/**/*", "src/index.d.ts"]
 }
