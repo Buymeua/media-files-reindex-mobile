@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "typeRoots": ["./src/@types", "./node_modules/@types"],
+    "types": ["react", "react-native", "jest"],
     "rootDir": ".",
     "paths": {
       "media-files-reindex-mobile": ["./src/index"]
@@ -9,6 +9,7 @@
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
     "lib": ["ESNext"],
     "module": "ESNext",
@@ -27,5 +28,6 @@
     "target": "ESNext",
     "verbatimModuleSyntax": true
   },
-  "include": ["src/**/*", "src/index.d.ts"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

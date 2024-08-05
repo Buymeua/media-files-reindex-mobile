@@ -3297,7 +3297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.5.5":
+"@types/jest@npm:^29.5.12":
   version: 29.5.12
   resolution: "@types/jest@npm:29.5.12"
   dependencies:
@@ -9279,7 +9279,7 @@ __metadata:
     "@evilmartians/lefthook": ^1.5.0
     "@react-native/eslint-config": ^0.73.1
     "@release-it/conventional-changelog": ^5.0.0
-    "@types/jest": ^29.5.5
+    "@types/jest": ^29.5.12
     "@types/react": ^18.3.3
     "@types/react-native": ^0.73.0
     commitlint: ^17.0.2
