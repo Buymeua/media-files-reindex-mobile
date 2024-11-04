@@ -10,6 +10,10 @@ interface MyMediaScannerType {
   scanFile(path: string): Promise<void>;
 }
 
+interface DownloaderType {
+  downloadFile(url: string, outputPath: string): Promise<string>;
+}
+
 const MyMediaScanner: MyMediaScannerType = NativeModules.MyMediaScanner
   ? NativeModules.MyMediaScanner
   : new Proxy(
@@ -21,6 +25,21 @@ const MyMediaScanner: MyMediaScannerType = NativeModules.MyMediaScanner
       }
     );
 
+const Downloader: DownloaderType = NativeModules.Downloader
+  ? NativeModules.Downloader
+  : new Proxy(
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
+
 export function scanFile(path: string): Promise<void> {
   return MyMediaScanner.scanFile(path);
+}
+
+export function downloadFile(url: string, outputPath: string): Promise<string> {
+  return Downloader.downloadFile(url, outputPath);
 }
