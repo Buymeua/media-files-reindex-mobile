@@ -64,9 +64,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Clean Gradle cache
-        run: ./gradlew clean
-
       - name: Cache turborepo for Android
         uses: actions/cache@v3
         with:
